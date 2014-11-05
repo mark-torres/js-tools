@@ -1,0 +1,12 @@
+/* ================= */
+/* = Common Styles = */
+/* ================= */
+
+body, table, th, td, input, select, option{
+	font-size: 11pt;
+}
+
+body{
+	color: black;
+	margin: 0px 10px;
+}
