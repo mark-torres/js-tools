@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Scaffold CBM</title>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+</head>
+<body class="w3-row w3-content">
+<header class="w3-section">
+	<h2>
+		Scaffold CBM
+	</h2>
+</header>
+<section class="w3-section">
+	<h3>
+		Form Horizontal
+	</h3>
+	<p>
+		Agrega los campos que quieres en el formulario:
+	</p>
+	<div class="w3-container">
+		<table class="w3-table w3-bordered">
+			<tr>
+				<th>Etiqueta</th>
+				<th>Nombre</th>
+				<th>Tipo</th>
+				<th>
+					<button class="w3-btn w3-tiny w3-blue" 
+						onclick="ScaffoldCBM_AgregarCampo();">
+						Agregar campo
+					</button>
+				</th>
+			</tr>
+			<tbody id="tablaFormHorizontal">
+				<tr class="fila-campos_form_horizontal">
+					<td>
+						<input class="w3-input w3-border" type="text">
+					</td>
+					<td>
+						<input class="w3-input w3-border" type="text">
+					</td>
+					<td>
+						<select class="w3-select">
+							<option selected value="text">Text</option>
+							<option value="text">Number</option>
+							<option value="text">Textarea</option>
+							<option value="text">Radio group</option>
+							<option value="text">Checkbox</option>
+						</select>
+					</td>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<button class="w3-btn w3-green">
+				Generar HTML
+			</button>
+		</p>
+	</div>
+</section>
+<footer class="w3-section">
+	&nbsp;
+</footer>
+</body>
+<script type="text/javascript" src="js/w3.js"></script>
+<script type="text/javascript">
+var camposFormHorizontal = [];
+function ScaffoldCBM_AgregarCampo() {
+	let body = document.getElementById('tablaFormHorizontal');
+	let tr = document.createElement('tr');
+	tr.class = 'alguna clases';
+	tr.innerHTML = `
+		<td>
+				<input class="w3-input w3-border" type="text">
+			</td>
+			<td>
+				<input class="w3-input w3-border" type="text">
+			</td>
+			<td>
+				<select class="w3-select">
+					<option selected value="text">Text</option>
+					<option value="text">Number</option>
+					<option value="text">Textarea</option>
+					<option value="text">Radio group</option>
+					<option value="text">Checkbox</option>
+				</select>
+			</td>
+			<td>
+				<button type="button" class="w3-btn w3-tiny w3-red">
+					&times;
+				</button>
+			</td>`;
+	body.appendChild(tr);
+	tr.querySelector('input').focus();
+}
+</script>
+</html>
